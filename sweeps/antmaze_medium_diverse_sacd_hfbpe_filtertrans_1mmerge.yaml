@@ -1,0 +1,64 @@
+program: ~/rl.py
+command:
+  - ${env}
+  - ${interpreter}
+  - ${program}
+method: grid
+project: bpe_rl
+name: antmaze_medium_diverse_sacd_hfbpe_filtertrans_1mmerge
+metric:
+  name: val/loss
+  goal: minimize
+parameters:
+  env_id:
+    value: 'antmaze-medium-diverse-v1'
+  seed:
+    values: [0, 1, 2, 3, 4]
+  use_wandb:
+    value: true
+  offline_rl:
+    value: false
+  online_rl:
+    value: true
+  use_goals:
+    value: false
+  continuous_actions:
+    value: false
+  num_clusters:
+    value: 16
+  tokenizer:
+    value: 'bpe'
+  k_actions:
+    value: 'subword'
+  vocab_size:
+    value: 16
+  prune_vocab:
+    value: true
+  max_vocab_size:
+    value: 1_000_000
+  num_eval_envs:
+    value: 10
+  num_evals_per_env:
+    value: 10
+  vocab_directions:
+    value: false
+  mahalanobis:
+    value: false
+  num_steps:
+    value: 10_000_000
+  online_render_interval:
+    value: 1_000_000
+  online_algorithm:
+    value: "sac"
+  num_train_envs:
+    value: 1
+  log_action_videos:
+    value: true
+  sac_ent_coef:
+    value: 'auto_1.0'
+  sac_tgt_ent_mult:
+    value: 0.1
+  online_batch_size:
+    value: 4096
+  filter_inplace_transitions:
+    value: true
