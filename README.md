@@ -1,6 +1,4 @@
-# Subwords as Skills: Tokenization for Sparse-Reward Reinforcement Learning
-
-[arXiv](https://arxiv.org/abs/2309.04459)
+# [Subwords as Skills: Tokenization for Sparse-Reward Reinforcement Learning](https://arxiv.org/abs/2309.04459)
 
 This repository contains the official code for the paper Subwords as Skills: Tokenization for Sparse-Reward Reinforcement Learning.
 
